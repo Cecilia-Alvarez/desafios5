@@ -1,0 +1,15 @@
+html 
+  header 
+    body     
+      form(action="/productos" method="post")
+        label= "Nombre: "
+        input(type="text" name="nombre" id="nombre")
+        label= "Autor: "
+        input(type="text" name="autor" id="autor")
+        label= "Precio: "
+        input(type="number" name="precio" id="precio")
+        button(type="submit")="Enviar" 
+      form
+      div
+        a(href="/productos") 
+          button="Productos"

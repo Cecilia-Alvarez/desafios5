@@ -1,0 +1,40 @@
+<header>
+    <%- include('./partials/encabezado.ejs') %>
+</header>
+<body>
+  <div class="container mt-3">
+    <div class="jumbotron">
+      <h1 style="color: blue">Ingrese el libro que desea:</h1>
+      <br />
+
+      <form action="/productos" method="post">
+        <div class="form-group">
+          <label for="nombre"><b>Nombre</b></label>
+          <input id="nombre" class="form-control" type="text" name="nombre" />
+        </div>
+
+        <div class="form-group">
+          <label for="autor"><b>Autor</b></label>
+          <input id="autor" class="form-control" type="text" name="autor" />
+        </div>
+
+        <div class="form-group">
+          <label for="precio"><b>Precio</b></label>
+          <input
+            id="precio"
+            class="form-control"
+            type="number"
+            name="precio"
+          />
+        </div>
+        <button class="btn btn-success mt-3 mb-5">Enviar</button>
+      </form>
+      <div>
+        <button class="btn btn-success mt-3 mb-5">
+          <a style="color: white" href="/productos">Productos</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+<%- include('./partials/pie.ejs') %>

@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title
+    style(type='text/css').
+  body(style='margin:0; padding:0; background-color:#F2F2F2;')
+    h2 Productos Ingresados:
+    center
+      table(style='width:100%', border='1')
+        thead
+            tr
+              th Nombre
+              th Autor
+              th Precio
+        tbody
+          each producto in productos
+              tr
+                td #{producto.nombre}
+                td #{producto.autor}
+                td #{producto.precio}
+        div
+            a(href="/") 
+                button="Volver"

@@ -1,0 +1,25 @@
+<h2>Tabla de Productos Ingresados</h2>
+
+<h3>Productos</h3>
+<div id="productos"></div>
+
+<script type="text/x-handlebars-template" id="tableTemplate">
+<table>
+<thead>
+  <tr>
+    {{#each productos.[0]}}
+      <th>{{@key}}</th>
+    {{/each}}
+  </tr>
+</thead>
+<tbody>
+  {{#each producto in productos}}
+    <tr>
+    	{{#each producto.nombre}}
+        <td>{{producto.nombre}}</td>
+      {{/each}}
+    </tr>
+  {{/each}}
+</tbody>
+</table>
+</script>
